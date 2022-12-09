@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-// const { data } = require("./data");
+const { data } = require("./data");
 
 // set the view engine to ejs
 app.set("view engine", "ejs");
@@ -10,7 +10,7 @@ app.set("view engine", "ejs");
 // index page
 app.get("/", function (req, res) {
   res.render("pages/index", {
-    // products: data,
+    products: data,
   });
 });
 
